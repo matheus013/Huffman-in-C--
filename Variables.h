@@ -1,3 +1,3 @@
 #include "FrequencyByte.h"
 
-FrequencyByte frequency;
+FrequencyByte frequencyByte;

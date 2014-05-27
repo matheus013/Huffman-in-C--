@@ -24,7 +24,7 @@ public:
             for(int i = 0; i < size; ++i){
 
                 in.seekg(i);
-                frequency.plusFrequency(in.get());
+                frequencyByte.plusFrequency(in.get());
             }
 
         }

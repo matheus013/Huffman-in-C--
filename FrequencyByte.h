@@ -6,7 +6,7 @@ using namespace std;
 class FrequencyByte
 {
     unsigned char element[256];
-    long frequency [256];
+    long frequency [256] = {0};
 
 public:
     FrequencyByte(){
@@ -26,10 +26,10 @@ public:
     }
     
     void printAll(unsigned char element){
-        if(frequency[element] == 0){}
-        else{
-            cout << "Frequencia: " << frequency[element] << endl;
-            cout << "Elemento: " << this->element[element] << endl;
+        if(getFrequency(element)
+                != 0){
+            cout << "Frequencia: " << getFrequency(element) << endl;
+            cout << "Elemento: " << getElement(element) << endl;
         }}
 
 
