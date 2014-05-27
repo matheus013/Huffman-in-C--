@@ -6,7 +6,7 @@ using namespace std;
 class FrequencyByte
 {
     unsigned char element[256];
-    long frequency [256] = {0};
+    long frequency [256];
 
 public:
     FrequencyByte(){

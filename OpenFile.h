@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include "Variables.h"
 
 using namespace std;
 
@@ -15,23 +16,19 @@ public:
         this->name = name;
 
     }
-    char * openFile(){
+    void openFile(){
+        ofstream temp;
         ifstream in(name.c_str(), ios::in | ios::binary | ios::ate);
-        this->size = in.tellg();
-        if( in == NULL){return NULL;}
-        else{
-            if (in.is_open()){
-                char * str;
+        if (in.is_open()){
+            size = in.tellg();
+            for(int i = 0; i < size; ++i){
 
-                in.seekg (0, in.end);
-                int length = in.tellg();
-                in.seekg (0, in.beg);
-                str = new char [length];
-                in.read (str,length);
-                in.close();
-                return str;
+                in.seekg(i);
+                frequency.plusFrequency(in.get());
             }
+
         }
+
     }
     long sizeFile(){
         return size;
