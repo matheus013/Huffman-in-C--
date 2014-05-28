@@ -6,13 +6,13 @@
 
 using namespace std;
 
-class FilePro{
+class OpenFile{
 private:
     string name;
     int size;
     FrequencyByte frequencyByte;
 public:
-    FilePro(){}
+    OpenFile(){}
     void setName(string name){
         this->name = name;
 

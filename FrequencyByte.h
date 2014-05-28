@@ -34,7 +34,8 @@ public:
                 != 0){
             cout << "Frequencia: " << getFrequency(element) << endl;
             cout << "Elemento: " << getElement(element) << endl;
-        }}
+        }
+    }
 
 
 };
