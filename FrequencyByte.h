@@ -3,8 +3,8 @@
 
 using namespace std;
 
-class FrequencyByte
-{
+class FrequencyByte{
+
     unsigned char element[256];
     long frequency [256] = {0};
 

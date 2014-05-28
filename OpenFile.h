@@ -10,6 +10,7 @@ class FilePro{
 private:
     string name;
     int size;
+    FrequencyByte frequencyByte;
 public:
     FilePro(){}
     void setName(string name){
@@ -17,7 +18,6 @@ public:
 
     }
     void openFile(){
-        FrequencyByte frequencyByte;
         ifstream in(name.c_str(), ios::in | ios::binary | ios::ate);
         if (in.is_open()){
             size = in.tellg();
@@ -30,8 +30,12 @@ public:
         }
 
     }
+
     long sizeFile(){
         return size;
+    }
+    long getF(int id){
+        return frequencyByte.getFrequency(id);
     }
     string getName(){
         return name;
