@@ -18,7 +18,7 @@ public:
 
     }
     void onLeaf(Node * node){
-        if(node->left == NULL || node->right == NULL){ node->leaf = true; }
+        if(node->left == NULL && node->right == NULL){ node->leaf = true; }
     }
 
 

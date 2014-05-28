@@ -21,10 +21,14 @@ public:
     long getFrequency(unsigned char element){
         return frequency[element];
     }
+    void setFrequency(unsigned char frequency,int id){
+        this->frequency[id] = frequency;
+    }
+
     void plusFrequency(unsigned char element){
         this->frequency[element]++;
     }
-    
+
     void printAll(unsigned char element){
         if(getFrequency(element)
                 != 0){

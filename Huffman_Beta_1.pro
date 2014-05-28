@@ -22,5 +22,4 @@ HEADERS += \
     Node.h \
     FrequencyByte.h \
     OpenFile.h \
-    BitVector.h \
-    Variables.h
+    BitVector.h

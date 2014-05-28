@@ -2,7 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-#include "Variables.h"
+#include "FrequencyByte.h"
 
 using namespace std;
 
@@ -17,7 +17,7 @@ public:
 
     }
     void openFile(){
-        ofstream temp;
+        FrequencyByte frequencyByte;
         ifstream in(name.c_str(), ios::in | ios::binary | ios::ate);
         if (in.is_open()){
             size = in.tellg();

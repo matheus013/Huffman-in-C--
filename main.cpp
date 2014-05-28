@@ -1,6 +1,5 @@
 #include "OpenFile.h"
 #include "FrequencyByte.h"
-#include "Variables.h"
 #include <string.h>
 
 int main()
