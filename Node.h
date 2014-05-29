@@ -1,5 +1,6 @@
 #ifndef NODE_H
 #define NODE_H
+
 template <typename E> class Node
 {
 private:

@@ -4,7 +4,9 @@
 class BitVector
 {
 public:
-    BitVector();
+    BitVector(){
+
+    }
 };
 
 #endif // BITVECTOR_H

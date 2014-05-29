@@ -1,3 +1,6 @@
+#ifndef FREQUENCYBYTE_H
+#define FREQUENCYBYTE_H
+
 #include <iostream>
 #include <stdlib.h>
 
@@ -41,3 +44,4 @@ public:
 };
 
 
+#endif // FREQUENCYBYTE_H

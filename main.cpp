@@ -1,11 +1,12 @@
 #include "OpenFile.h"
 #include "FrequencyByte.h"
+#include "Tree.h"
 #include <string.h>
 
 int main()
 {
     OpenFile file;
-    FrequencyByte frequencyByte;
+    FrequencyByte  frequencyByte;
     string directory;
     cout << "Enter directory for file:" << endl;
     cin >> directory;

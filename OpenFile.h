@@ -1,3 +1,5 @@
+#ifndef OPENFILE_H
+#define OPENFILE_H
 #include <string>
 #include <iostream>
 #include <sstream>
@@ -44,3 +46,5 @@ public:
 
 
 };
+
+#endif // OPENFILE_H
