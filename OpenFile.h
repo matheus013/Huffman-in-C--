@@ -36,7 +36,7 @@ public:
     long sizeFile(){
         return size;
     }
-    long getF(int id){
+    long getFrequency(int id){
         return frequencyByte.getFrequency(id);
     }
     string getName(){
