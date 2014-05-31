@@ -14,7 +14,6 @@ int main()
     file.openFile();
     for(int i;i < 256 ; i++){
                 frequencyByte.setFrequency(file.getFrequency(i),i);
-
     }
     for(int i;i < 256;i++){
         frequencyByte.printAll(i);

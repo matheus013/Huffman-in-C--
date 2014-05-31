@@ -24,7 +24,6 @@ public:
         if (in.is_open()){
             size = in.tellg();
             for(int i = 0; i < size; ++i){
-
                 in.seekg(i);
                 frequencyByte.plusFrequency(in.get());
             }
