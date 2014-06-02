@@ -41,9 +41,6 @@ public:
     string getName(){
         return name;
     }
-
-
-
 };
 
 #endif // OPENFILE_H

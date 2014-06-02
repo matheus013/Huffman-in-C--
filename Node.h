@@ -1,32 +1,51 @@
 #ifndef NODE_H
 #define NODE_H
-
-template <typename E> class Node
+#include <string>
+using namespace std;
+class Node
 {
 private:
-    E element;
+    unsigned char element;
+    string code;
+    long frequency;
     Node * left;
     Node * right;
+    Node * next;
     bool leaf = false;
 
 public:
-    Node(E element,Node left,Node right){
+    Node(unsigned char element,long frequency){
+        this->frequency = frequency;
         this->element = element;
-        this->left = left;
-        this->right = right;
     }
-
-    E getElement(){
+    unsigned char getElement(){
         return element;
     }
-    void setElement(E element){
+    long setFrequency(long frequency){
+        this->frequency = frequency;
+    }
+    void setElement(unsigned char element){
         this->element = element;
     }
-    void setLeft(Node left){
+    void catCode(char c){
+        code += c;
+    }
+    void setLeft(Node * left){
         this->left = left;
     }
-    void setRight(Node right){
+    void setRight(Node * right){
         this->right = right;
+    }
+    void setLeaf(){
+        if(isLeaf()){
+            this->leaf = false;
+        }
+        if(!isLeaf()){
+            this->leaf = true;
+        }
+    }
+    bool isLeaf(){
+       return leaf;
     }
 };
 

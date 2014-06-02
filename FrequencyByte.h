@@ -32,15 +32,6 @@ public:
         this->frequency[element]++;
     }
 
-    void printAll(unsigned char element){
-        if(getFrequency(element)
-                != 0){
-            cout << "Frequencia: " << getFrequency(element) << endl;
-            cout << "Elemento: " << getElement(element) << endl;
-        }
-    }
-
-
 };
 
 
