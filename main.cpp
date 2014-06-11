@@ -15,4 +15,7 @@ int main()
     for(int i;i < 256 ; i++){
                 frequencyByte.setFrequency(file.getFrequency(i),i);
     }
+    for(int i;i < 256;i++){
+        cout << "Frequencia: " << frequencyByte.getFrequency(i) << ", " << "Char: " << frequencyByte.getElement(i) << endl;
+    }
 }
