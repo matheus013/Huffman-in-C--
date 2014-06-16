@@ -21,4 +21,5 @@ HEADERS += \
     Tree.h \
     Node.h \
     FrequencyByte.h \
-    OpenFile.h
+    OpenFile.h \
+    ArrayFrequecy.h

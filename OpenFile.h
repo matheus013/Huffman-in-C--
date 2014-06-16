@@ -14,7 +14,7 @@ private:
     int size;
     FrequencyByte frequencyByte;
 public:
-    OpenFile(){}
+    OpenFile();
     void setName(string name){
         this->name = name;
 
@@ -35,8 +35,8 @@ public:
     long sizeFile(){
         return size;
     }
-    long getFrequency(int id){
-        return frequencyByte.getFrequency(id);
+    FrequencyByte getFrequency(){
+        return frequencyByte;
     }
     string getName(){
         return name;
