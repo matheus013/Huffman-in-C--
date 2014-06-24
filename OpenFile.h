@@ -14,33 +14,11 @@ private:
     int size;
     FrequencyByte frequencyByte;
 public:
-    OpenFile(string name){
-
-        this->name = name;
-        openFile();
-    }
-
-
-    void openFile(){
-        ifstream in(name.c_str(), ios::in | ios::binary | ios::ate);
-        if (in.is_open()){
-            size = in.tellg();
-            for(int i = 0; i < size; ++i){
-                in.seekg(i);
-                frequencyByte.plusFrequency(in.get());
-            }
-        }
-    }
-
-    long sizeFile(){
-        return size;
-    }
-    FrequencyByte getFrequency(){
-        return frequencyByte;
-    }
-    string getName(){
-        return name;
-    }
+    OpenFile(string name);
+    virtual void openFile() = 0;
+    virtual long sizeFile() = 0;
+    virtual FrequencyByte getFrequency() = 0;
+    virtual string getName() = 0;
 };
 
 #endif // OPENFILE_H

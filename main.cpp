@@ -1,16 +1,24 @@
-#include "OpenFile.h"
-#include "FrequencyByte.h"
-#include "Tree.h"
-#include <string.h>
-#include "ArrayFrequecy.h"
+#include "Huffman.h"
 
 int main()
 {
-    string directory = "//home//matheus//Documents//Huffman-in-Cplusplus//test.txt";
-    //    cout << "Enter directory for file:" << endl;
-    //    cin >> directory;
-    OpenFile *file = new OpenFile(directory);
-    ArrayFrequecy *array = new ArrayFrequecy(file->getFrequency());
-    array->arrayPrint();
-    
+    Huffman *huffman = new Huffman();
+    int commend;
+    string directory = "//home//matheus//Desktop//meusite//index.html";
+    //cin >> directory;
+    //cin >> commend;
+
+    switch (commend) {
+    case 0:
+        huffman->huffmanCompress(directory);
+        break;
+    case 1:
+        huffman->huffmanDecompress(directory);
+        break;
+    default:
+        cout << "Erro 407" << endl;
+        break;
+    }
+
+     
 }

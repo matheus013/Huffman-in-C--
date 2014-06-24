@@ -15,11 +15,16 @@ CONFIG   -= app_bundle
 TEMPLATE = app
 
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    Huffman.cpp \
+    ArrayFrequency.cpp \
+    Tree.cpp \
+    OpenFile.cpp
 
 HEADERS += \
     Tree.h \
     Node.h \
     FrequencyByte.h \
     OpenFile.h \
-    ArrayFrequecy.h
+    ArrayFrequency.h \
+    Huffman.h
