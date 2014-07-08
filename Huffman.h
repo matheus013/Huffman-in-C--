@@ -10,8 +10,8 @@ class Huffman
 {
 public:
     Huffman();
-    virtual void huffmanCompress(string str) = 0;
-    virtual void huffmanDecompress(string str) = 0;
+    void huffmanCompress(string str);
+    void huffmanDecompress(string str);
 };
 
 #endif // HUFFMAN_H

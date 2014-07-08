@@ -15,10 +15,10 @@ private:
     FrequencyByte frequencyByte;
 public:
     OpenFile(string name);
-    virtual void openFile() = 0;
-    virtual long sizeFile() = 0;
-    virtual FrequencyByte getFrequency() = 0;
-    virtual string getName() = 0;
+     void openFile();
+     long sizeFile();
+     FrequencyByte getFrequency();
+     string getName();
 };
 
 #endif // OPENFILE_H

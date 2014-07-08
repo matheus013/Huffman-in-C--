@@ -18,7 +18,18 @@ void ArrayFrequency::arrayOrder(){
     {
         for(int j = 0; j < cont - 1; j++)
         {
-            if (valueLong[j] > valueLong[j + 1])
+            if (valueLong[j] == valueLong[j + 1])
+            {
+                if(elements[j] > elements[j + 1]){
+                    aux = valueLong[j];
+                    c = elements[j];
+                    valueLong[j] = valueLong[j+1];
+                    elements[j] = elements[j+1];
+                    valueLong[j+1] = aux;
+                    elements[j+1] = c;
+                }
+            }
+            else if (valueLong[j] > valueLong[j + 1])
             {
                 aux = valueLong[j];
                 c = elements[j];
@@ -38,5 +49,12 @@ long ArrayFrequency::getFrequency(int i){
 }
 char ArrayFrequency::getElements(int i){
     return elements[i];
+}
+void ArrayFrequency::inCode(string str, char c){
+    this->elements[c] = c;
+    this->code[c] = str;
+}
+string ArrayFrequency::getCode(int i){
+    return code[i];
 }
 

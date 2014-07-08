@@ -9,17 +9,15 @@ class ArrayFrequency
     int cont = 0;
     long valueLong[256] = {0};
     char elements[256];
+    string code[256];
 public:
-    ArrayFrequency(FrequencyByte byte);
-
-    virtual void arrayOrder() = 0;
-    virtual long getFrequency(int i) = 0;
-    virtual char getElements(int i) = 0;
-    void arrayPrint(){
-        for(int i = 0; i < cont;i++){
-            cout << "F: " << valueLong[i] << endl << "C: " << elements[i] << endl << endl;
-        }
-    }
+     ArrayFrequency(){}
+     ArrayFrequency(FrequencyByte byte);
+     void arrayOrder();
+     long getFrequency(int i);
+     char getElements(int i);
+     void inCode(string str, char c);
+     string getCode(int i);
 };
 
 #endif // ARRAYFREQUECY_H

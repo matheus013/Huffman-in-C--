@@ -1,18 +1,25 @@
-#ifndef HUFFTREE_H
-#define HUFFTREE_H
+#ifndef TREE_H
+#define TREE_H
 #include "Node.h"
 #include "ArrayFrequency.h"
+#include <iostream>
+#include <string>
 
-class HuffTree {
-    long f;
-    unsigned char c;
-    Node * root = new Node(c,f);
+using namespace std;
+
+
+class Tree
+{
 public:
-    HuffTree();
-    virtual void addNode(int id,unsigned char c) = 0;
-    virtual void buildTree(ArrayFrequency *array) = 0;
-
-    
+    Node * root = new Node();
+    Tree(ArrayFrequency *array);
+    ArrayFrequency *array = new ArrayFrequency();
+    ~Tree();
+    void addNode(unsigned char element,long frequency);
+    string getCode(int i);
+    void createCode(Node * node,char c);
+    ArrayFrequency *getArrayCode();
 };
 
-#endif // HUFFTREE_H
+
+#endif // TREE_H

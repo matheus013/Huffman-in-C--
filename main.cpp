@@ -1,12 +1,13 @@
 #include "Huffman.h"
+#include "math.h"
 
 int main()
 {
     Huffman *huffman = new Huffman();
     int commend;
-    string directory = "//home//matheus//Desktop//meusite//index.html";
-    //cin >> directory;
-    //cin >> commend;
+    string directory;
+    cin >> directory;
+    cin >> commend;
 
     switch (commend) {
     case 0:

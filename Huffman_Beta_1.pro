@@ -19,7 +19,9 @@ SOURCES += main.cpp \
     Huffman.cpp \
     ArrayFrequency.cpp \
     Tree.cpp \
-    OpenFile.cpp
+    OpenFile.cpp \
+    Node.cpp \
+    FrequencyByte.cpp
 
 HEADERS += \
     Tree.h \

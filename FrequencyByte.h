@@ -12,25 +12,12 @@ class FrequencyByte{
     long frequency [256] = {0};
 
 public:
-    FrequencyByte(){
-        for(int i = 0;i < 256;i++){
-            element[i] = i;
-        }
-    }
+    FrequencyByte();
 
-    char getElement(unsigned char element){
-        return this->element[element];
-    }
-    long getFrequency(unsigned char element){
-        return frequency[element];
-    }
-    void setFrequency(unsigned char frequency,int id){
-        this->frequency[id] = frequency;
-    }
-
-    void plusFrequency(unsigned char element){
-        this->frequency[element]++;
-    }
+    char getElement(unsigned char element);
+    long getFrequency(unsigned char element);
+    void setFrequency(unsigned char frequency,int id);
+    void plusFrequency(unsigned char element);
 
 };
 
