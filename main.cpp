@@ -5,10 +5,10 @@ int main()
 {
     Huffman *huffman = new Huffman();
     int commend;
-    string directory;
-    cin >> directory;
-    cin >> commend;
-
+    string directory = "C:\\Users\\Matheus\\Desktop\\Huffman-in-Cplusplus\\test.txt";
+//    cin >> directory;
+//    cin >> commend;
+commend = 0;
     switch (commend) {
     case 0:
         huffman->huffmanCompress(directory);
