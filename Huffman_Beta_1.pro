@@ -21,7 +21,8 @@ SOURCES += main.cpp \
     Tree.cpp \
     OpenFile.cpp \
     Node.cpp \
-    FrequencyByte.cpp
+    FrequencyByte.cpp \
+    CreateHuff.cpp
 
 HEADERS += \
     Tree.h \
@@ -29,4 +30,5 @@ HEADERS += \
     FrequencyByte.h \
     OpenFile.h \
     ArrayFrequency.h \
-    Huffman.h
+    Huffman.h \
+    CreateHuff.h

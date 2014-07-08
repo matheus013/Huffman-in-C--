@@ -55,6 +55,6 @@ void ArrayFrequency::inCode(string str, char c){
     this->code[c] = str;
 }
 string ArrayFrequency::getCode(int i){
-    return code[i];
+    return code[i].c_str();
 }
 

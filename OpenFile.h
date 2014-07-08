@@ -14,7 +14,7 @@ private:
     int size;
     FrequencyByte frequencyByte;
 public:
-    OpenFile(string name);
+     OpenFile(string name);
      void openFile();
      long sizeFile();
      FrequencyByte getFrequency();
