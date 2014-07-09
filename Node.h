@@ -4,9 +4,9 @@
 using namespace std;
 class Node {
 
-    unsigned char element;
-    long frequency;
-    string code;
+    unsigned char element = 0;
+    long frequency = 0;
+        string code;
 public:
     Node *left;
     Node *right;
@@ -17,7 +17,7 @@ public:
     void setElement(unsigned char c);
     long getFrequency();
     unsigned char getElement();
-    void createCode(char c);
+        void createCode(char c);
 };
 
 #endif // NODE_H

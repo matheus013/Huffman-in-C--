@@ -2,6 +2,7 @@
 #define ARRAYFREQUECY_H
 #include "FrequencyByte.h"
 #include <string>
+#include <QHash>
 using namespace std;
 
 class ArrayFrequency
@@ -9,15 +10,15 @@ class ArrayFrequency
     int cont = 0;
     long valueLong[256] = {0};
     char elements[256];
-    string code[256];
+    QHash<char,string> hash;
 public:
-     ArrayFrequency(){}
-     ArrayFrequency(FrequencyByte byte);
-     void arrayOrder();
-     long getFrequency(int i);
-     char getElements(int i);
-     void inCode(string str, char c);
-     string getCode(int i);
+    ArrayFrequency(FrequencyByte byte);
+    ArrayFrequency(){}
+    void arrayOrder();
+    long getFrequency(int i);
+    char getElements(int i);
+    void inCode(string str, char c);
+    string getCode(char c);
 };
 
 #endif // ARRAYFREQUECY_H

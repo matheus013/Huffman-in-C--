@@ -22,3 +22,4 @@ long Node::getFrequency(){
 unsigned char Node::getElement(){
     return element;
 }
+

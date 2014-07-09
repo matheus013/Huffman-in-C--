@@ -10,6 +10,8 @@ using namespace std;
 
 class Tree
 {
+    int size = 0;
+    bool status = false;
 public:
     Node * root = new Node();
     Tree(ArrayFrequency *array);
@@ -19,6 +21,9 @@ public:
     string getCode(int i);
     void createCode(Node * node,char c);
     ArrayFrequency *getArrayCode();
+    int getSize();
+    bool isStatus();
+    void okStatus();
 };
 
 

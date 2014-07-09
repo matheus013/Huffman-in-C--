@@ -11,6 +11,7 @@ ArrayFrequency::ArrayFrequency(FrequencyByte byte){
     arrayOrder();
 }
 
+
 void ArrayFrequency::arrayOrder(){
     long aux;
     char c;
@@ -51,10 +52,16 @@ char ArrayFrequency::getElements(int i){
     return elements[i];
 }
 void ArrayFrequency::inCode(string str, char c){
-    this->elements[c] = c;
-    this->code[c] = str;
+    hash.insert(c,str);
 }
-string ArrayFrequency::getCode(int i){
-    return code[i];
+string ArrayFrequency::getCode(char c){
+    if(hash.isEmpty()){
+        cout << "Erro na codificação, Hash Vazia" << endl;
+        return 0;
+    }
+    else{
+        string code = hash[c];
+        return code;
+    }
 }
 
