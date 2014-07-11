@@ -5,6 +5,10 @@
 #include <iostream>
 
 using namespace std;
+Tree::Tree(QString rep){
+
+    this->rep =  rep.toUtf8().constData();
+}
 
 Tree::Tree() {
     root = 0;

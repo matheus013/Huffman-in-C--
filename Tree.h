@@ -16,6 +16,7 @@ class Tree {
 public:
     Tree();
     Tree(Node * root);
+    Tree(QString rep);
     Tree(string rep);
     ~Tree();
     void showTree();

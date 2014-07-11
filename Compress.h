@@ -1,7 +1,7 @@
 #ifndef CREATEHUFF_H
 #define CREATEHUFF_H
 #include "ArrayFrequency.h"
-#include <string>
+#include <QString>
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -10,14 +10,15 @@
 
 class Compress
 {
-    string trash(string str);
-    string path;
-    string fileName;
-    string compressedFileName;
-    string uncompressDirectory;
+    QString trash(QString str);
+    QString path;
+    QString fileName;
+    QString compressedFileName;
+    QString uncompressDirectory;
 public:
-    Compress(string pathFile);
-    Compress(string pathFile, string pathCompressedFile, string uncompressDirectory);
+    Compress();
+    Compress(QString pathFile);
+    Compress(QString pathFile, QString pathCompressedFile, QString uncompressDirectory);
     ~Compress();
     bool uncompress();
     bool compress();

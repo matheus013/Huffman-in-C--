@@ -24,7 +24,8 @@ SOURCES += main.cpp \
     HTree.cpp \
     Tree.cpp \
     Queue.cpp \
-    Compress.cpp
+    Compress.cpp \
+    File.cpp
 
 HEADERS += \
     Node.h \
@@ -35,4 +36,5 @@ HEADERS += \
     HTree.h \
     Tree.h \
     Queue.h \
-    Compress.h
+    Compress.h \
+    File.h

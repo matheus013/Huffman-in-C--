@@ -8,10 +8,11 @@ void Huffman::huffmanCompress(string directory){
     OpenFile *file = new OpenFile(directory);
     cout << "Armazenando em Array" << endl;
     ArrayFrequency *array = new ArrayFrequency(file->getFrequency());
+    array->arrayPrint();
     cout << "Build tree.." << endl;
     HuffmanTree * huffmanTree = new HuffmanTree(array);
     cout << "Coding" << endl;
-    Compress * compress = new CreateHuff();
+    Compress * compress = new Compress();
 
 
 }
