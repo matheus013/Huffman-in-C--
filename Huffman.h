@@ -3,6 +3,7 @@
 #include "ArrayFrequency.h"
 #include "OpenFile.h"
 #include "Tree.h"
+#include "HTree.h"
 
 using namespace std;
 

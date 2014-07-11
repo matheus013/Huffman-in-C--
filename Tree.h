@@ -1,30 +1,30 @@
 #ifndef TREE_H
 #define TREE_H
-#include "Node.h"
-#include "ArrayFrequency.h"
-#include <iostream>
-#include <string>
+# include <string>
+# include "Node.h"
+# include <QVariant>
 
-using namespace std;
-
-
-class Tree
-{
-    int size = 0;
-    bool status = false;
+class Tree {
+    void preOrder(Node * node);
+    void visit(Node * node);
+    void preOrderRep(Node * node);
+    int max(int n1, int n2);
+    void visitRep(Node * node);
+    void verifyChar(QString characters, Node * root);
+    Node * root;
+    string rep;
 public:
-    Node * root = new Node();
-    Tree(ArrayFrequency *array);
-    ArrayFrequency *array = new ArrayFrequency();
+    Tree();
+    Tree(Node * root);
+    Tree(string rep);
     ~Tree();
-    void addNode(unsigned char element,long frequency);
-    string getCode(int i);
-    void createCode(Node * node,char c);
-    ArrayFrequency *getArrayCode();
-    int getSize();
-    bool isStatus();
-    void okStatus();
-};
+    void showTree();
+    string createRep ();
+    Node * getRoot();
+    void setRoot (Node * newRoot);
+    string getRep();
+    int setHeight(Node * node);
 
+};
 
 #endif // TREE_H

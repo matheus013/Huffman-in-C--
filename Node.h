@@ -1,23 +1,41 @@
 #ifndef NODE_H
 #define NODE_H
 #include <string>
+
 using namespace std;
 class Node {
-
-    unsigned char element = 0;
-    long frequency = 0;
-        string code;
+    Node * root;
+    Node * left;
+    Node * right;
+    Node * next;
+    unsigned char key;
+    int frequency;
+    int height;
+    string path;
 public:
-    Node *left;
-    Node *right;
-    Node(){}
-    void in(unsigned char e,long f);
-    void setCode(string code);
-    void setFrequency(long f);
-    void setElement(unsigned char c);
-    long getFrequency();
-    unsigned char getElement();
-        void createCode(char c);
+    Node ();
+    Node (unsigned char key, int frequency);
+    Node (unsigned char key);
+    Node (QChar key);
+    ~Node ();
+    void setRoot (Node * root);
+    Node * getRoot();
+    void setLeft (Node * left);
+    Node * getLeft();
+    void setRight (Node * right);
+    Node * getRight();
+    void setFrequency(int frequency);
+    int getFrequency();
+    void setKey(char key);
+    char getKey();
+    bool isLeaf();
+    void setNext(Node * node);
+    Node * getNext();
+    void setHeight(int height);
+    int getHeight();
+    void setPath(string path);
+    string getPath();
+
 };
 
 #endif // NODE_H

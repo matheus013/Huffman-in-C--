@@ -16,7 +16,7 @@ private:
 public:
      OpenFile(string name);
      void openFile();
-     long sizeFile();
+     int sizeFile();
      FrequencyByte getFrequency();
      string getName();
 };

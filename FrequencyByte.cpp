@@ -10,7 +10,7 @@ FrequencyByte::FrequencyByte(){
 char FrequencyByte::getElement(unsigned char element){
     return this->element[element];
 }
-long FrequencyByte::getFrequency(unsigned char element){
+int FrequencyByte::getFrequency(unsigned char element){
     return frequency[element];
 }
 void FrequencyByte::setFrequency(unsigned char frequency,int id){

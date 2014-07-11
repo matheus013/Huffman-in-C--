@@ -18,17 +18,21 @@ TEMPLATE = app
 SOURCES += main.cpp \
     Huffman.cpp \
     ArrayFrequency.cpp \
-    Tree.cpp \
     OpenFile.cpp \
     Node.cpp \
     FrequencyByte.cpp \
-    CreateHuff.cpp
+    HTree.cpp \
+    Tree.cpp \
+    Queue.cpp \
+    Compress.cpp
 
 HEADERS += \
-    Tree.h \
     Node.h \
     FrequencyByte.h \
     OpenFile.h \
     ArrayFrequency.h \
     Huffman.h \
-    CreateHuff.h
+    HTree.h \
+    Tree.h \
+    Queue.h \
+    Compress.h

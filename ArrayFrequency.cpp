@@ -3,7 +3,7 @@
 ArrayFrequency::ArrayFrequency(FrequencyByte byte){
     for (int i = 0; i < 256; ++i) {
         if(byte.getFrequency(i) != 0){
-            valueLong[cont] = byte.getFrequency(i);
+            valueint[cont] = byte.getFrequency(i);
             elements[cont] = byte.getElement(i);
             cont++;
         }
@@ -11,32 +11,31 @@ ArrayFrequency::ArrayFrequency(FrequencyByte byte){
     arrayOrder();
 }
 
-
 void ArrayFrequency::arrayOrder(){
-    long aux;
+    int aux;
     char c;
     for(int i = 0; i < cont; i++)
     {
         for(int j = 0; j < cont - 1; j++)
         {
-            if (valueLong[j] == valueLong[j + 1])
+            if (valueint[j] == valueint[j + 1])
             {
                 if(elements[j] > elements[j + 1]){
-                    aux = valueLong[j];
+                    aux = valueint[j];
                     c = elements[j];
-                    valueLong[j] = valueLong[j+1];
+                    valueint[j] = valueint[j+1];
                     elements[j] = elements[j+1];
-                    valueLong[j+1] = aux;
+                    valueint[j+1] = aux;
                     elements[j+1] = c;
                 }
             }
-            else if (valueLong[j] > valueLong[j + 1])
+            else if (valueint[j] > valueint[j + 1])
             {
-                aux = valueLong[j];
+                aux = valueint[j];
                 c = elements[j];
-                valueLong[j] = valueLong[j+1];
+                valueint[j] = valueint[j+1];
                 elements[j] = elements[j+1];
-                valueLong[j+1] = aux;
+                valueint[j+1] = aux;
                 elements[j+1] = c;
             }
 
@@ -44,24 +43,16 @@ void ArrayFrequency::arrayOrder(){
     }
 
 }
-long ArrayFrequency::getFrequency(int i){
+int ArrayFrequency::getFrequency(int i){
 
-    return valueLong[i];
+    return valueint[i];
 }
 char ArrayFrequency::getElements(int i){
     return elements[i];
 }
-void ArrayFrequency::inCode(string str, char c){
-    hash.insert(c,str);
-}
-string ArrayFrequency::getCode(char c){
-    if(hash.isEmpty()){
-        cout << "Erro na codificação, Hash Vazia" << endl;
-        return 0;
-    }
-    else{
-        string code = hash[c];
-        return code;
-    }
-}
 
+void ArrayFrequency::arrayPrint(){
+    for(int i = 0; i < cont;i++){
+        cout << "F: " << valueint[i] << endl << "C: " << elements[i] << endl << endl;
+    }
+}
