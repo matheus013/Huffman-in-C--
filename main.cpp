@@ -1,5 +1,6 @@
 #include "Huffman.h"
 #include "Compress.h"
+#include "string.h"
 void huffhelp(){
     cout <<"huffman [comando] [LOCAL]" << endl;
     cout << endl;
@@ -19,71 +20,53 @@ void huffhelp(){
 }
 
 int main(int argc, char *argv[]) {
-
-    //Verificar se entrou com um comando existente
-    if (argc >= 2 && argc <=5){
-
+    //cout << argc << endl << argv << endl;
+    if (argc <= 5 && argc >= 2){
         QString fileName = "";
         QString compressedFileName = "";
         QString directory = "";
 
-    //Comprimir com novo nome
         if (argc == 5) {
-            if (argv[1] == "-c" && argv[3] == "-o"){
+            if (argv[1][0] == '-' && argv[1][1] == 'c' && argv[3][0] == '-' && argv && argv[3][1] == 'o'){
                 fileName = argv[2];
                 compressedFileName = argv[4];
                 Compress c = Compress(fileName, compressedFileName, directory);
                 c.compress();
 
-            }
-            else {
+            } else {
                 huffhelp();
             }
-        }
-        //Descomprimir
-        else if (argc == 4){
-            if (argv[2] == "-d"){
+        } else if (argc == 4){
+            if (argv[2][0] == '-' && argv[2][1] == 'd'){
                 fileName = argv[1];
                 directory = argv[3];
                 Compress c = Compress(fileName, compressedFileName, directory);
                 c.uncompress();
 
-            }
-            else {
+            } else {
                 huffhelp();
             }
-        }
-        else if (argc == 3){
-            if (argv[1] == "-c"){
+        } else if (argc == 3){
+            if (argv[1][0] == '-' && argv[1][1] == 'c'){
                 fileName = argv[2];
-                compressedFileName.append(".huff");
+                compressedFileName.append("out.huff");
                 Compress c = Compress(fileName, compressedFileName, directory);
                 c.compress();
 
-            }
-            else {
+            } else {
                 huffhelp();
             }
-        }
-        else if (argc == 2){
-            if (argv[1] == "-h"){
-                huffhelp();
-            }
-
-        }
-        else if (argc == 2){
+        } else if (argc == 2){
             fileName = argv[1];
             Compress c = Compress(fileName, compressedFileName, directory);
             c.uncompress();
 
-        }
-        else {
+        } else {
             huffhelp();
         }
 
 
-    }
-    else {
+    } else {
         huffhelp();
     }
 

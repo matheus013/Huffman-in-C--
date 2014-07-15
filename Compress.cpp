@@ -3,10 +3,6 @@
 #include <QBitArray>
 #include "File.h"
 
-Compress::~Compress(){
-
-}
-
 Compress::Compress(QString pathFile){
 
     path = pathFile;
@@ -213,4 +209,8 @@ bool Compress::uncompress() {
        cout << "Arquivo .huff não encontrado";
         return false;
     }
+}
+
+Compress::~Compress(){
+
 }
