@@ -1,4 +1,3 @@
-
 #include <QDataStream>
 #include <QBitArray>
 #include <QTextStream>
@@ -8,24 +7,24 @@
 #include <File.h>
 
 File::File() {
-    m_path = "";
-    m_filename = "";
+    path = "";
+    filename = "";
 }
 
 File::File(QString path, QString filename) {
-    m_path = path;
-    m_filename = filename;
+    path = path;
+    filename = filename;
 }
 
 File::~File() {
-    m_path.clear();
-    m_filename.clear();
+    path.clear();
+    filename.clear();
 }
 
 void File:: split()
 {
     int sizeMax = 4;
-    QString fullpath = m_path + m_filename;
+    QString fullpath = path + filename;
 
     QFile bigFile (fullpath);
     if (bigFile.exists()) {
@@ -36,7 +35,7 @@ void File:: split()
         std::vector<char> buffer (achunk);
 
         for (int i = 0; i < parts; i++) {
-            QString partialpath = m_path + QString::number(i) + m_filename;
+            QString partialpath = path + QString::number(i) + filename;
 
             bigFile.read(&buffer[0], achunk);
 
@@ -51,7 +50,7 @@ void File:: split()
 }
 
 QByteArray File::read() {
-    QFile file(m_path + m_filename);
+    QFile file(path + filename);
     file.open(QIODevice::ReadOnly);
 
     QTextStream in(&file);

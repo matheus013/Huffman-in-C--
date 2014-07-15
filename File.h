@@ -14,8 +14,8 @@ public:
     QByteArray read();
     void write(QByteArray byteArray, QString file);
 private:
-    QString m_path;
-    QString m_filename;
+    QString path;
+    QString filename;
 };
 
 #endif // FILE_H

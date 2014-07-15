@@ -8,7 +8,7 @@ QT       += core
 
 QT       -= gui
 
-TARGET = Huffman_Beta_1
+TARGET = huffman
 CONFIG   += console
 CONFIG   -= app_bundle
 

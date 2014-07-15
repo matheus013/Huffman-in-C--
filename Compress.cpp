@@ -3,6 +3,10 @@
 #include <QBitArray>
 #include "File.h"
 
+Compress::~Compress(){
+
+}
+
 Compress::Compress(QString pathFile){
 
     path = pathFile;

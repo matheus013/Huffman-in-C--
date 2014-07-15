@@ -9,10 +9,11 @@ using namespace std;
 
 class Huffman
 {
+    ArrayFrequency *array;
 public:
-    Huffman();
+    Huffman(QString directory);
     void huffmanCompress(string str);
-    void huffmanDecompress(string str);
+    ArrayFrequency *getArray();
 };
 
 #endif // HUFFMAN_H
