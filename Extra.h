@@ -1,5 +1,9 @@
 #include <string>
-
+#include <iostream>
+#include <sstream>
+#include <fstream>
+#include <fstream>
+using namespace std;
 
 void readfile(char* path, int freq[])
 {
@@ -13,17 +17,20 @@ void readfile(char* path, int freq[])
         int size = file.tellg();
         file.seekg(0, ios::beg);
 
-
+cout << endl;
         for(int i=0; i< size; i++)
         {
+            int aux = i;
+            int pc = (aux/size)*100;
             unsigned char x = file.get();
+            cout << "\rReading..." << pc << "%";
             y = x;
             (freq[y])++;
         }
     }
     else
     {
-        cout << "eRRO!1" << endl;
+        cout << "TRASH!1" << endl;
     }
 
     file.close();
@@ -96,12 +103,12 @@ void integridade(char* path1, char* path2)
         }
         else
         {
-            cout << "eRRo - Arquivo 2 não pode ser aberto" << endl;
+            cout << "TRASH - Arquivo 2 não pode ser aberto" << endl;
         }
     }
     else
     {
-        cout << "eRRo - Arquivo 1 não pode ser aberto!" << endl;
+        cout << "TRASH - Arquivo 1 não pode ser aberto!" << endl;
     }
 
     file2.close();

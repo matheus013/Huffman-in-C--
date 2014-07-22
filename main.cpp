@@ -24,15 +24,15 @@ void huffhelp(){
 
 int main(int argc, char* argv[]){
     int freq[256] = {0};
-    string aux, aux2,aux5;
+    string str, str2,str5;
     if(argc == 5){
         if(strcmp(argv[1],"-c") == 0){
             if(strcmp(argv[3],"-o") == 0){
 
-                aux = argv [4] ;
-                aux = aux.substr(aux.length() - 5, 5);
+                str = argv [4] ;
+                str = str.substr(str.length() - 5, 5);
 
-                if(strcmp(aux.c_str(), ".huff") == 0){
+                if(strcmp(str.c_str(), ".huff") == 0){
 
                     readfile(argv[2], freq);
                     Tree* huffman = new Tree(freq);
@@ -42,27 +42,28 @@ int main(int argc, char* argv[]){
                 }
                 else{
                     cout << "Erro! A extensão do arquivo de saída deverá ser '.huff' " << endl;
+                    huffhelp();
                 }
             }
             else{
                 cout << "Erro!Digite o comando -o após o nome do arquivo original." << endl;
+                huffhelp();
             }
         }
         else{
             cout << "Erro! Digite o comando -c antes do nome do arquivo original" << endl;
+            huffhelp();
         }
     }
-    else if(argc == 3)
-    {
+    else if(argc == 3){
 
-        if(argv[1] != "-c")
-        {
-            aux5 = argv[2];
-            size_t found = aux5.find(".");
-            aux5 = aux5.substr(0, found);
-            aux5 += ".huff";
-            char* saida = new char[aux5.length() + 1];
-            strcpy(saida, aux5.c_str());
+        if(argv[1] == "-c"){
+            str5 = argv[2];
+            size_t found = str5.find(".");
+            str5 = str5.substr(0, found);
+            str5 += ".huff";
+            char* saida = new char[str5.length() + 1];
+            strcpy(saida, str5.c_str());
             readfile(argv[2], freq);
             Tree* huffman = new Tree(freq);
             huffman->writefile(argv[2]);
@@ -72,21 +73,20 @@ int main(int argc, char* argv[]){
 
             delete [] saida;
         }
-        else
-        {
-            cout << "eRRo!! Digite o comando -c antes do nome do arquivo original" << endl;
-
+        else{
+            cout << "Erro!! Digite o comando -c antes do nome do arquivo original" << endl;
+            huffhelp();
         }
     }
 
     else if (argc == 2)
     {
 
-        aux2 = argv[1];
-        aux2 = aux2.substr(aux2.length() - 5, 5);
+        str2 = argv[1];
+        str2 = str2.substr(str2.length() - 5, 5);
 
 
-        if(aux2 == ".huff"){
+        if(str2 == ".huff"){
 
             Tree* THuff = new Tree(0, false);
             THuff->readFile(argv[1]);
@@ -94,30 +94,33 @@ int main(int argc, char* argv[]){
             cout << "Descomprimido" << endl;
         }
         else{
-            cout << "eRRO! A extensão do arquivo de entrada deverá ser '.huff' " << endl;
+            cout << "Erro! A extensão do arquivo de entrada deverá ser '.huff' " << endl;
+            huffhelp();
         }
     }
     else if(argc == 4){
         if (argv[2] == " -d"){
-            if(aux2 == ".huff"){
-                char* aux3 ;
-                aux3 = argv[3];
-                char* aux4;
-                aux4 = argv[1];
-                strcat(aux3,aux4);
+            if(str2 == ".huff"){
+                char* str3 ;
+                str3 = argv[3];
+                char* str4;
+                str4 = argv[1];
+                strcat(str3,str4);
                 Tree* THuff = new Tree(0, false);
-                THuff->readFile(aux3);
-                THuff->rebuildOriginalFile(aux3);
+                THuff->readFile(str3);
+                THuff->rebuildOriginalFile(str3);
                 cout << "Descomprimido" << endl;
 
             }
 
             else{
-                cout << "eRRO! A extensão do arquivo de entrada deverá ser '.huff'" << endl;
+                cout << "Erro! A extensão do arquivo de entrada deverá ser '.huff'" << endl;
+                huffhelp();
             }
         }
         else{
-            cout << "eRRO!Digite o comando -d após o nome do arquivo" << endl;
+            cout << "Erro!Digite o comando -d após o nome do arquivo" << endl;
+            huffhelp();
         }
     }
 

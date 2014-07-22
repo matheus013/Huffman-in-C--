@@ -1,8 +1,7 @@
 #include "Tree.h"
 #include "Node.h"
 #include "ArrayList.h"
-#include "BitArray.h"
-//#include "Stack.h"
+#include "BitArray.h""
 #include <iostream>
 #include <stdio.h>
 #include <cmath>
@@ -74,7 +73,7 @@ void Tree::buildTree(int frq[]){
         lista->moveToStart();
     }
     else{
-        cout << "Fudeu!" << endl;
+        cout << "TRASH!" << endl;
     }
 }
 
@@ -264,7 +263,7 @@ void Tree::writeHeader(char *filename, char *pathOut){
         }
     }
     else{
-        cout << "Fudeu!" << endl;
+        cout << "TRASH!" << endl;
     }
     out.close();
 }
@@ -366,13 +365,13 @@ void Tree::writefile(char *pathIn){
         }
         write.close();
 
-        //sizeTrash = buffer->trashLenght();
+        sizeTrash = buffer->trashLenght();
 
 
         buffer->clear();
 
     }
-    else cout << "Fudeu!" << endl;
+    else cout << "TRASH!" << endl;
     file.close();
 
 }
@@ -380,7 +379,7 @@ void Tree::writefile(char *pathIn){
 void Tree::reWriteFile(char *filename, char *pathOut){
 
     writeHeader(filename, pathOut);
-    //printNo(root);
+    printNo(root);
     ifstream ler;
     ofstream write;
     int size2 = 0;
@@ -422,11 +421,11 @@ void Tree::reWriteFile(char *filename, char *pathOut){
         ler.close();
     }
     else{
-        cout << "Fudeu!" << endl;
+        cout << "TRASH!" << endl;
     }
 
     if( remove("temp.huff") != 0){
-        perror("Fudeu deleting file");
+        perror("TRASH deleting file");
     }
 }
 
@@ -434,7 +433,7 @@ int Tree::checkOverWrite(char *pathOut){
     ifstream file;
     file.open(pathOut, ios::in | ios::binary | ios::ate);
         if(file.is_open()){
-        cout << "Fudeu!\tArquivo Existente\n" << endl;
+        cout << "TRASH!\tArquivo Existente\n" << endl;
         file.close();
         return -1;
     }
@@ -466,7 +465,7 @@ void Tree::readFile(char *pathIn){
 
     }
     else{
-        cout << "Fudeu!" << endl;
+        cout << "TRASH!" << endl;
     }
 
     file.close();
@@ -646,7 +645,7 @@ void Tree::rebuildTree(string maestro){
     }
 
     if(arranjador->length() != 1){
-        cout << "Fudeu! arvore desequilibrada" << endl;
+        cout << "TRASH! arvore desequilibrada" << endl;
     }
 }
 string Tree::procura(string codificacao, int *x){
@@ -705,7 +704,7 @@ string Tree::procura(string codificacao, int *x){
         }
     }
     else{
-        cout << "Fudeu!" << endl;
+        cout << "TRASH!" << endl;
     }
 
     write.close();
@@ -756,7 +755,7 @@ string Tree::procurafinal(string codificacao){
     }
     else
     {
-        cout << "Fudeu!" << endl;
+        cout << "TRASH!" << endl;
     }
     write.close();
     return aux_s;
@@ -772,7 +771,7 @@ void Tree::rebuildOriginalFile(char *pathIn)
 
 
     rebuildTree(tree_written);
-    //printNo(root);
+    printNo(root);
     equilibrar(tree_written);
 
     file.open(pathIn, ios::in | ios::binary | ios::ate);
@@ -806,7 +805,7 @@ void Tree::rebuildOriginalFile(char *pathIn)
     }
     else
     {
-        cout << "Fudeu!" << endl;
+        cout << "TRASH!" << endl;
     }
 
     file.close();
