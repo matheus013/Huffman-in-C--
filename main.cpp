@@ -57,7 +57,7 @@ int main(int argc, char* argv[]){
     }
     else if(argc == 3){
 
-        if(argv[1] == "-c"){
+        if(strcmp(argv[1],"-c") == 0){
             str5 = argv[2];
             size_t found = str5.find(".");
             str5 = str5.substr(0, found);
@@ -79,15 +79,10 @@ int main(int argc, char* argv[]){
         }
     }
 
-    else if (argc == 2)
-    {
-
+    else if (argc == 2){
         str2 = argv[1];
         str2 = str2.substr(str2.length() - 5, 5);
-
-
         if(str2 == ".huff"){
-
             Tree* THuff = new Tree(0, false);
             THuff->readFile(argv[1]);
             THuff->rebuildOriginalFile(argv[1]);
@@ -99,7 +94,7 @@ int main(int argc, char* argv[]){
         }
     }
     else if(argc == 4){
-        if (argv[2] == " -d"){
+        if (strcmp(argv[2]," -d") == 0){
             if(str2 == ".huff"){
                 char* str3 ;
                 str3 = argv[3];

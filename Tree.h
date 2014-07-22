@@ -75,11 +75,8 @@ public:
     Node* getRoot();
     //Recebe a árvore em forma de string
     string getTree_written();
-
     void setTree_written(string tree);
-
     void equilibrar(string tree);
-
     int getfilenameSize()
     {
         return sizeFileName;

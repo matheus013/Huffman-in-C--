@@ -379,7 +379,7 @@ void Tree::writefile(char *pathIn){
 void Tree::reWriteFile(char *filename, char *pathOut){
 
     writeHeader(filename, pathOut);
-    printNo(root);
+    //printNo(root);
     ifstream ler;
     ofstream write;
     int size2 = 0;
@@ -771,7 +771,7 @@ void Tree::rebuildOriginalFile(char *pathIn)
 
 
     rebuildTree(tree_written);
-    printNo(root);
+    //printNo(root);
     equilibrar(tree_written);
 
     file.open(pathIn, ios::in | ios::binary | ios::ate);
