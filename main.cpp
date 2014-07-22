@@ -56,6 +56,19 @@ int main(int argc, char* argv[]){
         }
     }
     else if(argc == 3){
+//        if(strcmp(argv[1],"-duo") == 0){
+//            str5 = argv[2];
+//            size_t found = str5.find(".");
+//            str5 = str5.substr(0, found);
+//            str5 += ".huff";
+//            char* saida = new char[str5.length() + 1];
+//            strcpy(saida, str5.c_str());
+//            readfile(argv[2], freq);
+//            Tree* huffman = new Tree(freq);
+//            huffman->writefile(argv[2]);
+//            huffman->reWriteFile(argv[2], saida);
+//            cout << ""
+//        }
 
         if(strcmp(argv[1],"-c") == 0){
             str5 = argv[2];

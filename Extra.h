@@ -12,25 +12,18 @@ void readfile(char* path, int freq[])
 
     file.open(path , ios::in | ios::binary | ios::ate);
 
-    if(file.is_open())
-    {
+    if(file.is_open()){
         int size = file.tellg();
         file.seekg(0, ios::beg);
-
-cout << endl;
-        for(int i=0; i< size; i++)
-        {
-            int aux = i;
-            int pc = (aux/size)*100;
+        for(int i=0; i< size; i++){
             unsigned char x = file.get();
-            cout << "\rReading..." << pc << "%";
             y = x;
             (freq[y])++;
         }
     }
     else
     {
-        cout << "TRASH!1" << endl;
+        cout << "TRASH!" << endl;
     }
 
     file.close();
@@ -44,7 +37,7 @@ void integridade(char* path1, char* path2)
     string buffer2;
     int x = 0;
     int y = 0;
-//    int k = 0;
+    //    int k = 0;
 
     file1.open(path1, ios::in | ios::binary | ios::ate);
     file2.open(path2, ios::in | ios::binary | ios::ate);

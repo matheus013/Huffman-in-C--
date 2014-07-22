@@ -131,7 +131,7 @@ void Tree::writeTree(Node *node, string temp){
 void Tree::equilibrar(string tree){
     int qabre = 0;
     int qfecha = 0;
-    QStack<char*>* verificador = new QStack<char*>();
+    QStack<char*> *verificador = new QStack<char*>();
     char* abre = "(";
     char* fecha = ")";
 
@@ -142,7 +142,7 @@ void Tree::equilibrar(string tree){
         }
         else if(tree[i] == ')'){
             qfecha++;
-            if(verificador->length() != 0){
+            if(verificador->size() != 0){
                 if(verificador->top() == "("){
                     verificador->pop();
                 }
@@ -644,7 +644,7 @@ void Tree::rebuildTree(string maestro){
         }
     }
 
-    if(arranjador->length() != 1){
+    if(arranjador->size()!= 1){
         cout << "TRASH! arvore desequilibrada" << endl;
     }
 }
