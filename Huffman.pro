@@ -5,7 +5,6 @@
 #-------------------------------------------------
 
 QT       += core
-
 QT       -= gui
 
 TARGET = Huffman
@@ -20,6 +19,7 @@ SOURCES += main.cpp \
     Tree.cpp \
     ArrayList.cpp \
     BitArray.cpp \
+    Extra.cpp
 
 HEADERS += \
     ArrayList.h \

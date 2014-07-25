@@ -371,7 +371,7 @@ void Tree::writefile(char *pathIn){
         buffer->clear();
 
     }
-    else cout << "TRASH!" << endl;
+    else cout << "TRASH!in WriteFile" << endl;
     file.close();
 
 }
